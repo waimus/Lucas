@@ -13,6 +13,8 @@ With the stuff that are already written in the code, you can expand it by follow
 5. Discord and Giphy account.
 
 ## Installation:
+This would use the PIP command to install some of the API. Make sure you have PIP. When Python is intalled you may want to try to use command `python -m pip install --upgrade pip` or search a hint over the internet on how to install PIP.
+
 1. Download and install Python and Git from the link above.
 2. Open Git Bash console, or in Windows Explorer right click -> `Git Bash Here`
 3. Install Discord.py in Git Bash by running the command: `py -3 -m pip install -U discord.py`. 
