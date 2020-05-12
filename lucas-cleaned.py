@@ -200,16 +200,16 @@ async def testembed(ctx):
     
 @bot.command(pass_context = True)
 async def cat(ctx, *args):
-	"""get a random cat pic from the internet"""
-	url = "https://cataas.com/cat"
+    """get a random cat pic from the internet"""
+    url = "https://cataas.com/cat"
 
-	if (len(args) > 0):
-		url = url + "/" + args[0]
+    if (len(args) > 0):
+        url = url + "/" + args[0]
 
-	embed = discord.Embed(color=0x00ff00)
-	embed.set_image(url=url)
+    embed = discord.Embed(color=0x00ff00)
+    embed.set_image(url=url)
 
-	await ctx.send(embed=embed)
+    await ctx.send(embed=embed)
         
 @bot.command()
 async def gif(ctx, *keywords):
