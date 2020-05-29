@@ -24,7 +24,7 @@ load_dotenv(dotenv_path)
 
 #token
 #insert your tokens in the .env file
-discord_token = os.environ.get("MHT_DISCORD_TOKEN")
+discord_token = os.environ.get("DISCORD_TOKEN")
 giphy_token = os.environ.get("GIPHY_TOKEN")
 
 game = discord.Game("with a paranoid mind")
