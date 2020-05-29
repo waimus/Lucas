@@ -10,19 +10,23 @@ With the stuff that are already written in the code, you can expand it by follow
 2. Git: https://git-scm.com/downloads
 3. Discord.py: https://github.com/Rapptz/discord.py
 4. Giphy API: https://github.com/Giphy/giphy-python-client
-5. Discord and Giphy account.
+5. python-dotenv: https://pypi.org/project/python-dotenv/
+6. Discord and Giphy account.
 
 ## Installation:
 This would use the PIP command to install some of the API. Make sure you have PIP. When Python is intalled you may want to try to use command `python -m pip install --upgrade pip` or search a hint over the internet on how to install PIP.
 
 1. Download and install Python and Git from the link above.
 2. Open Git Bash console, or in Windows Explorer right click -> `Git Bash Here`
-3. Install Discord.py in Git Bash by running the command: `py -3 -m pip install -U discord.py`. 
+3. Install Discord.py in Git Bash by running the command: `python3 -m pip install -U discord.py`. 
 >*More information on how to install Discord.py is available on its Github page:*. <br>
 https://github.com/Rapptz/discord.py/blob/master/README.rst
-4. Install Giphy API Python in Git Bash by running the command: `pip install giphy_client`. 
+4. Install Giphy API Python in Git Bash by running the command: `python3 -m pip install -U giphy_client`. 
 >*More information on how to install Giphy API Python is available on its Github page*. <br>
 https://github.com/Giphy/giphy-python-client/blob/master/README.md
+5. Install python-dotenv in Git Bash by running the command: `python3 -m pip install -U python-dotenv`. 
+>*More information about python-dotenv is available on its site*. <br>
+https://pypi.org/project/python-dotenv/
 
 ## API Token
 These tokens connect your bot to the Discord and Giphy service. The bot wouldn't be able to be online if you do not have token.
@@ -50,11 +54,13 @@ Feel free to name your bot whatever you like.
 
 #### Token Setup
 See [API Token](#api-token) to read how to get your Discord and Giphy API token. <br>
-Now in the `lucas-cleaned.py` file assign your Discord bot token and Giphy API token in the file line 16. 
+Now in the `.env` file assign your Discord bot token and Giphy API token in the file line 4. 
 ```python
-#token
-discord_token = 'your-discord-api-token-here'
-giphy_token = 'your-giphy-api-token-here'
+# .env
+#enter your secrets and token here, and load them to your scripts
+
+DISCORD_TOKEN='input-your-token-here'
+GIPHY_TOKEN='input-your-token-here'
 ```
 A reminder that you have to keep your token secret.
 
@@ -64,4 +70,4 @@ A. Double click the `lucas-cleaned.py` file. <br>
 B. Open Git Bash console in the folder where `lucas-cleaned.py` file located and run `python lucas-cleaned.py` in the console.
 <br>
 
-You have to keep it running in order the bot to be online in Discord. I think you can host it in a hosting service so it can run forever without having it running in your computer. But I personally have never host bot in a hosting service so I don't know how to do it.
+You have to keep it running in order the bot to be online in Discord. To do that, you can use some Platform as a Service provider to host your bot. [glitch.com](https://glitch.com/) is one easy service to host your bot.
