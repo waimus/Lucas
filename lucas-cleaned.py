@@ -3,6 +3,8 @@
 import sys
 import asyncio
 import random
+import urllib.request
+import json
 import discord
 from discord.ext import commands
 from random import choice
@@ -210,6 +212,33 @@ async def cat(ctx, *args):
     embed.set_image(url=url)
 
     await ctx.send(embed=embed)
+    
+@bot.command()
+async def xkcd(ctx, arg):
+    """Get an xkcd comic from entered number or random"""
+    url = "https://xkcd.com/"
+    
+    if arg == "random":
+        num = random.randint(1, 2313)
+        url = url + str(num)
+    else:
+        url = url + arg 
+        
+    info = url + "/info.0.json"
+    
+    try:
+        with urllib.request.urlopen(info) as xkcdjson:
+            xkcddata = json.loads(xkcdjson.read())
+    
+            embed = discord.Embed(title="{}".format(xkcddata["safe_title"]), description="[{0}]({1})".format(xkcddata["alt"], url), color=0x00ff00)
+            embed.set_image(url=xkcddata["img"])
+    
+            await ctx.send(embed=embed)
+    except:
+        await ctx.send("cannot retrieve data from " + url)
+    finally:
+        pprint(ctx.message.author.name + "=> xkcd: " + url)
+        pprint("image: " + xkcddata["img"])
         
 @bot.command()
 async def gif(ctx, *keywords):
