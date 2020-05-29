@@ -14,10 +14,18 @@ import giphy_client
 from giphy_client.rest import ApiException
 from pprint import pprint
 
+#dotenv
+import os
+from os.path import join, dirname
+from dotenv import load_dotenv
+
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
 
 #token
-discord_token = 'your-discord-api-token-here'
-giphy_token = 'your-giphy-api-token-here'
+#insert your tokens in the .env file
+discord_token = os.environ.get("MHT_DISCORD_TOKEN")
+giphy_token = os.environ.get("GIPHY_TOKEN")
 
 game = discord.Game("with a paranoid mind")
 gifrating = 'g'
@@ -214,11 +222,11 @@ async def cat(ctx, *args):
     await ctx.send(embed=embed)
     
 @bot.command()
-async def xkcd(ctx, arg):
+async def xkcd(ctx, arg = None):
     """Get an xkcd comic from entered number or random"""
     url = "https://xkcd.com/"
     
-    if arg == "random":
+    if arg == "random" or arg is None:
         num = random.randint(1, 2313)
         url = url + str(num)
     else:
@@ -230,7 +238,7 @@ async def xkcd(ctx, arg):
         with urllib.request.urlopen(info) as xkcdjson:
             xkcddata = json.loads(xkcdjson.read())
     
-            embed = discord.Embed(title="{}".format(xkcddata["safe_title"]), description="[{0}]({1})".format(xkcddata["alt"], url), color=0x00ff00)
+            embed = discord.Embed(title="{}".format(xkcddata["safe_title"]), description="[{0}]({1}) [{2}]".format(xkcddata["alt"], url, xkcddata["num"]), color=0x00ff00)
             embed.set_image(url=xkcddata["img"])
     
             await ctx.send(embed=embed)
