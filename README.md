@@ -1,7 +1,7 @@
-# LucasTheSadRetard
-Basic Discord.py bot for fun. I wrote this script for a bot I named "Lucas the Sad Retard". Responses to a word in a sentence, commands, and GIF search commmand powered by Giphy. But this is a one-file-mess. 
+# Lucas
+Basic Discord.py bot for fun. I wrote this script for a bot I call Lucas. Responses to a word in a sentence, commands, and GIF search commmand powered by Giphy. But this is a one-file-mess. 
 
-Created using Discord.py by Rapptz, Python 3, and Giphy Python API. This bot script can be used to your own Discord bot by just using your bot API token, and the bot is not necessarily named "Lucas the Sad Retard".
+Created using Discord.py by Rapptz, Python 3, and Giphy Python API. This bot script can be used to your own Discord bot by just using your bot API token, and the bot is not necessarily named Lucas.
 
 With the stuff that are already written in the code, you can expand it by following how things were written or by however you like. And when all the stuff that are required for this bot to be able to run installed, you can also create more Discord.py bot by yourself from scratch.
 
