@@ -64,7 +64,7 @@ def contains_word(s, w):
 #discord functions
 @client.event
 async def on_ready():
-    print('We have logged in as {0.user}'.format(client))    
+    print('We have logged in as {0.user}'.format(client))
     await client.change_presence(status=discord.Status.idle, activity=game)
     
 @bot.event
@@ -92,11 +92,7 @@ async def on_message(message):
         embed.set_image(url="https://cdn.discordapp.com/attachments/684039836503506944/690166049617870848/images6.jpg")
         
         await message.channel.send(embed=embed)
-        
-    if 'say the f word' in message.content or 'bully aku waktu smp' in message.content or 'rizky' in message.content or 'rizki' in message.content or 'riski' in message.content or 'risky' in message.content or 'rezki' in message.content or 'reski' in message.content or 'resky' in message.content or 'rezky' in message.content or 'reznov' in message.content or 'ruski' in message.content or 'russian' in message.content:
-        print ('someone got bullied and he blamed rizki')
-        await message.channel.send('╭∩╮（￣へ￣）╭∩╮ FUCEK ╭∩╮（￣へ￣）╭∩╮')
-        
+
     if contains_word(message.content, 'nice') or contains_word(message.content, '69'):
         print('someone said nice in the middle of a sentence')
         await message.channel.send('Nice')
@@ -104,12 +100,8 @@ async def on_message(message):
     if contains_word(message.content, '420'):
         await message.channel.send('Blaze it!')
         
-        
     if 'ngakak' in message.content or 'wk' in message.content or 'kw' in message.content:
         await message.channel.send('AHAHHAHAHAHAHAHHAHAHAHAHAHAHAHAH LMAO')
-        
-    if contains_word(message.content, 'asw') or contains_word(message.content, 'asu') or contains_word(message.content, 'aso'):
-        await message.channel.send('artinya ANJING')
         
     if contains_word(message.content, 'ok') or 'okey' in message.content or 'oke' in message.content or 'okay' in message.content:
         await message.channel.send('sip')
@@ -129,12 +121,6 @@ async def on_message(message):
     if 'bruh' in message.content:
         await message.channel.send ('b r u h   m o m e n t')
         
-    if 'anjing' in message.content:
-        await message.channel.send ('Lu juga ANJING')
-        
-    if 'fri' in message.content:
-        await message.channel.send ('All hail lord FRI')
-        
     if 'unexpect' in message.content or 'expecting that' in message.content:
         await message.channel.send ('Nobody expects the SPANISH INQUISITION')
         
@@ -145,13 +131,13 @@ async def on_message(message):
         await message.channel.send('bau bawang')
         
     if 'lol' in message.content:
-        await message.channel.send('What the lol did you just loling say about me, you little lol? I’ll have you lol that I graduated top of my lol class in the Navy LOLs, and I’ve been involved in numerous secret raids on Al-Lolita, and I have over 300 confirmed lols. I am trained in lol warfare and I’m the top loller in the entire US armed lollers...If only you could have known what unloly retribution your little “loller” comment was about to bring down upon you, maybe you would have lolled your fucking tongue. But you couldn’t, you didn’t, and now you are paying the price, you goddamn lol. I will lol fury all over you and you will lol in it. You’re loling dead, lol.')
+        await message.channel.send('What the lol did you just loling say about me, you little lol? I’ll have you lol that I graduated top of my lol class in the Navy LOLs, and I’ve been involved in numerous secret raids on Al-Lolita, and I have over 300 confirmed lols. I am trained in lol warfare and I’m the top loller in the entire US armed lollers...If only you could have known what unloly retribution your little “loller” comment was about to bring down upon you, maybe you would have lolled your ducking tongue. But you couldn’t, you didn’t, and now you are paying the price, you goddamn lol. I will lol fury all over you and you will lol in it. You’re loling dead, lol.')
       
     
 @bot.command()
 async def introduce(ctx):
     """Introducing this bot."""
-    await ctx.send('Hi! I am Lucas from Kampus Biru. I am also slightly retarded. Just like my creator :)')
+    await ctx.send('Hi! I am Lucas. I am also quite of a rotiesserie sausage. Just like my creator :)')
         
 @bot.command()
 async def repeat(ctx, times : int, content: str):
@@ -195,7 +181,7 @@ async def sendfile(ctx, *filepath):
         
 @bot.command()
 async def testembed(ctx):
-    """This is a fucking test command."""
+    """This is a test command."""
     # file = discord.File("https://i.imgur.com/2WmBJjp.png", filename="...")
     # await ctx.send("content", file=file)
     
